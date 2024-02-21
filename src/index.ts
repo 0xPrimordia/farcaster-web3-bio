@@ -37,10 +37,10 @@ app.post('/', async (c) => {
 
     const backgroundColors = ['green', 'purple', 'red', 'blue']
 
-    const imageText = encodeURIComponent(inputText || 'Hello World')
+    const imageText = encodeURIComponent(inputText || '0xhashbrown.eth')
     const imageColor = backgroundColors[buttonIndex - 1] || 'white'
 
-    const frameImage = `https://placehold.co/1920x1005/${imageColor}/white?text=${imageText}`
+    const frameImage = `https://api.crawlbase.com/screenshots?token=4HrVHd6RoiajGYYEJsx0QA&height=700&url=https://web3.bio/${inputText}`
     const framePostUrl = c.req.url
 
     return c.html(html`
